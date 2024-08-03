@@ -24,6 +24,12 @@ Algorithm:
      ![helper Functions](https://i.postimg.cc/Bvg0BgnK/Untitled-2024-06-30-1457-3.png)
 
 - Updating Hash after every 512-bit round:
-  ![Updating hash](https://i.postimg.cc/qMQrVQTM/Untitled-2024-06-30-1457-4.png)
-
+  - H0 = H0 + a
+  - H1 = H1 + b
+  - H2 = H2 + c
+  - H3 = H3 + d
+  - H4 = H4 + e
+  - H5 = H5 + f
+  - H6 = H6 + g
+  - H7 = H7 + h
 - Finally, Cocatenate the hash values to get the final 256-bit hash.
