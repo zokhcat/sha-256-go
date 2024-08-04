@@ -2,7 +2,7 @@ An attempt to implement SHA-256 from scratch using golang and do low-level progr
 
 Algorithm:
 
-- Intialization of Hash Values(H0-H7) and the constants (K0-K63)
+- Intialization of Hash Values(H0-H7) and the constants (K0-K63) - done
 - Padding to ensure the message is near a 512 bits multiple.
   -- workflow of padding:
   1. add one "1" after converting the message to binary
