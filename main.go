@@ -83,6 +83,21 @@ var _K = []uint32{
 	0xc67178f2,
 }
 
+func parse_into_blocks(paddedStr string) []string {
+	var blocks []string
+	blockSize := 512
+
+	if len(paddedStr)%blockSize != 0 {
+		panic("Padded string length is not a multiple of 512")
+	}
+
+	for i := 0; i < len(paddedStr); i += blockSize {
+		blocks = append(blocks, paddedStr[i:i+blockSize])
+	}
+
+	return blocks
+}
+
 func padded_binary(x_bits []string) string {
 	paddedStr := strings.Join(x_bits, "")
 

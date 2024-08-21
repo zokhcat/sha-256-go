@@ -8,7 +8,7 @@ Algorithm:
   1. add one "1" after converting the message to binary
   2. add "0"s till it satisfies _448(bits) mod 512(bits)_. In layman terms, there must be 64 bits space left after adding "0"s in the nearest 512 mulitple.
   3. In the end appending the 64-bit representation to the message we received.
-- Parsing the message by sptlitting it into 512-bit blocks. W[0]-W[63]
+- [x] Parsing the message by sptlitting it into 512-bit blocks. W[0]-W[63]
 - Scheduling the message:
   -- workflow of scheduling:
   1. W[0]-W[15] are extracted directly.
