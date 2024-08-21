@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 var _H = []uint32{
@@ -82,6 +83,21 @@ var _K = []uint32{
 	0xc67178f2,
 }
 
+func padded_binary(x_bits []string) string {
+	paddedStr := strings.Join(x_bits, "")
+
+	originalLen := len(paddedStr)
+
+	paddedStr += "1"
+	paddingLen := (448 - (originalLen+1)%512 + 512) % 512
+	paddedStr += strings.Repeat("0", paddingLen)
+
+	lengthBinary := fmt.Sprintf("%064b", originalLen)
+	paddedStr += lengthBinary
+
+	return paddedStr
+}
+
 func muster_binary(x string) []string {
 	var x_bits []string
 
@@ -97,4 +113,6 @@ func main() {
 	input := "Zoheb"
 	bits := muster_binary(input)
 	fmt.Println(bits)
+	paddedBinary := padded_binary(bits)
+	fmt.Println("Padded Binary Representation:", paddedBinary)
 }
