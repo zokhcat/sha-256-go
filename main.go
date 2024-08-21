@@ -4,10 +4,6 @@ import (
 	"fmt"
 )
 
-const Size = 32
-const BlockSize = 64
-const chunk = 64
-
 var _H = []uint32{
 	0x6A09E667,
 	0xBB67AE85,
@@ -86,6 +82,19 @@ var _K = []uint32{
 	0xc67178f2,
 }
 
+func muster_binary(x string) []string {
+	var x_bits []string
+
+	for _, char := range x {
+		bitString := fmt.Sprintf("%08b", char)
+		x_bits = append(x_bits, bitString)
+	}
+
+	return x_bits
+}
+
 func main() {
-	fmt.Println("Hello, World!")
+	input := "Zoheb"
+	bits := muster_binary(input)
+	fmt.Println(bits)
 }
