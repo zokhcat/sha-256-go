@@ -1,4 +1,4 @@
-An attempt to implement SHA-256 from scratch using golang and do low-level programming.
+An attempt to implement SHA-256 from scratch using golang and reverse engineer.
 
 Algorithm:
 
